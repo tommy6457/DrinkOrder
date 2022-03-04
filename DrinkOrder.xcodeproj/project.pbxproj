@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		650817D327B25BBF004F191B /* DrinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650817D227B25BBF004F191B /* DrinkType.swift */; };
+		650817D827B25C5A004F191B /* NetWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650817D727B25C5A004F191B /* NetWorkController.swift */; };
+		650817DA27B262C6004F191B /* NetWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650817D927B262C5004F191B /* NetWorkError.swift */; };
+		650817DC27B26D2C004F191B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650817DB27B26D2C004F191B /* MenuViewController.swift */; };
+		6511DE8C27B24DE600537282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DE8B27B24DE600537282 /* AppDelegate.swift */; };
+		6511DE8E27B24DE600537282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DE8D27B24DE600537282 /* SceneDelegate.swift */; };
+		6511DE9027B24DE600537282 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6511DE8F27B24DE600537282 /* UserViewController.swift */; };
+		6511DE9327B24DE600537282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6511DE9127B24DE600537282 /* Main.storyboard */; };
+		6511DE9527B24DE900537282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6511DE9427B24DE900537282 /* Assets.xcassets */; };
+		6511DE9827B24DE900537282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6511DE9627B24DE900537282 /* LaunchScreen.storyboard */; };
+		6520ECCE27B4B70400DBA54D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520ECCD27B4B70400DBA54D /* Menu.swift */; };
+		6527447A27C4CCF30007ED04 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527447927C4CCF30007ED04 /* OrderItem.swift */; };
+		6527447C27C4D3F30007ED04 /* OrderHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527447B27C4D3F30007ED04 /* OrderHeader.swift */; };
+		6527448027C5EBD30007ED04 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6527447F27C5EBD20007ED04 /* LogInViewController.swift */; };
+		652849D927B3B97D0093420F /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652849D827B3B97D0093420F /* UserTableViewController.swift */; };
+		652849DB27B3BE930093420F /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652849DA27B3BE930093420F /* ItemTableViewController.swift */; };
+		65317DA227BF8F630041A95C /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65317DA127BF8F630041A95C /* CartTableViewController.swift */; };
+		65317DA427BF92970041A95C /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65317DA327BF92970041A95C /* CartTableViewCell.swift */; };
+		65448F6927B2B543009C2A22 /* Songti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 65448F6827B2B543009C2A22 /* Songti.ttc */; };
+		6548A3D727CC75ED00C39C40 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548A3D627CC75ED00C39C40 /* OrderViewController.swift */; };
+		6548A3DB27CDF09500C39C40 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548A3DA27CDF09500C39C40 /* OrderTableViewController.swift */; };
+		6548A3DD27CDF0EA00C39C40 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548A3DC27CDF0EA00C39C40 /* OrderTableViewCell.swift */; };
+		655D9C8F27BCD3FC007166DA /* DrinkAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D9C8E27BCD3FC007166DA /* DrinkAttributes.swift */; };
+		6587DFDE27BE7BB60049917A /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587DFDD27BE7BB60049917A /* CartViewController.swift */; };
+		6587DFE027BE81390049917A /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587DFDF27BE81390049917A /* Cart.swift */; };
+		6587DFE227BE82210049917A /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587DFE127BE82210049917A /* GlobalData.swift */; };
+		6587DFE427BE83BC0049917A /* HeaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6587DFE327BE83BC0049917A /* HeaderInfo.swift */; };
+		65BDCD7127D09FCE00D3374A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BDCD7027D09FCE00D3374A /* LoadingViewController.swift */; };
+		65D924C527BA4D27009065C7 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D924C427BA4D26009065C7 /* ChooseViewController.swift */; };
+		65D924C727BA4D4E009065C7 /* ChooseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D924C627BA4D4E009065C7 /* ChooseTableViewController.swift */; };
+		65E1BA9127C8AD4B008A1846 /* OrderHeader_status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E1BA9027C8AD4B008A1846 /* OrderHeader_status.swift */; };
+		65FB330C27B4E7D40057CD86 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB330B27B4E7D40057CD86 /* ItemTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		650817D227B25BBF004F191B /* DrinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkType.swift; sourceTree = "<group>"; };
+		650817D727B25C5A004F191B /* NetWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkController.swift; sourceTree = "<group>"; };
+		650817D927B262C5004F191B /* NetWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
+		650817DB27B26D2C004F191B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6511DE8827B24DE600537282 /* DrinkOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6511DE8B27B24DE600537282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6511DE8D27B24DE600537282 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6511DE8F27B24DE600537282 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		6511DE9227B24DE600537282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6511DE9427B24DE900537282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6511DE9727B24DE900537282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6511DE9927B24DE900537282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6520ECCD27B4B70400DBA54D /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		6527447927C4CCF30007ED04 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		6527447B27C4D3F30007ED04 /* OrderHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHeader.swift; sourceTree = "<group>"; };
+		6527447F27C5EBD20007ED04 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = SOURCE_ROOT; };
+		652849D827B3B97D0093420F /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		652849DA27B3BE930093420F /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		65317DA127BF8F630041A95C /* CartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		65317DA327BF92970041A95C /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartTableViewCell.swift; path = DrinkOrder/CartTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		65448F6827B2B543009C2A22 /* Songti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Songti.ttc; sourceTree = "<group>"; };
+		6548A3D627CC75ED00C39C40 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = SOURCE_ROOT; };
+		6548A3DA27CDF09500C39C40 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderTableViewController.swift; path = DrinkOrder/OrderTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		6548A3DC27CDF0EA00C39C40 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderTableViewCell.swift; path = DrinkOrder/OrderTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		655D9C8E27BCD3FC007166DA /* DrinkAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DrinkAttributes.swift; path = DrinkOrder/DrinkAttributes.swift; sourceTree = SOURCE_ROOT; };
+		6587DFDD27BE7BB60049917A /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = DrinkOrder/CartViewController.swift; sourceTree = SOURCE_ROOT; };
+		6587DFDF27BE81390049917A /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		6587DFE127BE82210049917A /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlobalData.swift; path = DrinkOrder/ViewController/GlobalData.swift; sourceTree = SOURCE_ROOT; };
+		6587DFE327BE83BC0049917A /* HeaderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfo.swift; sourceTree = "<group>"; };
+		65BDCD7027D09FCE00D3374A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingViewController.swift; path = DrinkOrder/LoadingViewController.swift; sourceTree = SOURCE_ROOT; };
+		65D924C427BA4D26009065C7 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		65D924C627BA4D4E009065C7 /* ChooseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTableViewController.swift; sourceTree = "<group>"; };
+		65E1BA9027C8AD4B008A1846 /* OrderHeader_status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHeader_status.swift; sourceTree = SOURCE_ROOT; };
+		65FB330B27B4E7D40057CD86 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6511DE8527B24DE600537282 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		650817D427B25BD0004F191B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65E1BA9027C8AD4B008A1846 /* OrderHeader_status.swift */,
+				6587DFDF27BE81390049917A /* Cart.swift */,
+				6587DFE127BE82210049917A /* GlobalData.swift */,
+				6527447B27C4D3F30007ED04 /* OrderHeader.swift */,
+				6587DFE327BE83BC0049917A /* HeaderInfo.swift */,
+				655D9C8E27BCD3FC007166DA /* DrinkAttributes.swift */,
+				6520ECCD27B4B70400DBA54D /* Menu.swift */,
+				650817D227B25BBF004F191B /* DrinkType.swift */,
+				6527447927C4CCF30007ED04 /* OrderItem.swift */,
+				650817D927B262C5004F191B /* NetWorkError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		650817D527B25BE1004F191B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65BDCD7027D09FCE00D3374A /* LoadingViewController.swift */,
+				6548A3DC27CDF0EA00C39C40 /* OrderTableViewCell.swift */,
+				6548A3DA27CDF09500C39C40 /* OrderTableViewController.swift */,
+				6548A3D627CC75ED00C39C40 /* OrderViewController.swift */,
+				6527447F27C5EBD20007ED04 /* LogInViewController.swift */,
+				65317DA327BF92970041A95C /* CartTableViewCell.swift */,
+				65317DA127BF8F630041A95C /* CartTableViewController.swift */,
+				6587DFDD27BE7BB60049917A /* CartViewController.swift */,
+				65D924C627BA4D4E009065C7 /* ChooseTableViewController.swift */,
+				65D924C427BA4D26009065C7 /* ChooseViewController.swift */,
+				6511DE8F27B24DE600537282 /* UserViewController.swift */,
+				650817DB27B26D2C004F191B /* MenuViewController.swift */,
+				652849D827B3B97D0093420F /* UserTableViewController.swift */,
+				652849DA27B3BE930093420F /* ItemTableViewController.swift */,
+				65FB330B27B4E7D40057CD86 /* ItemTableViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		650817D627B25BEB004F191B /* OtherController */ = {
+			isa = PBXGroup;
+			children = (
+				650817D727B25C5A004F191B /* NetWorkController.swift */,
+			);
+			path = OtherController;
+			sourceTree = "<group>";
+		};
+		6511DE7F27B24DE600537282 = {
+			isa = PBXGroup;
+			children = (
+				6511DE8A27B24DE600537282 /* DrinkOrder */,
+				6511DE8927B24DE600537282 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6511DE8927B24DE600537282 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6511DE8827B24DE600537282 /* DrinkOrder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6511DE8A27B24DE600537282 /* DrinkOrder */ = {
+			isa = PBXGroup;
+			children = (
+				650817D627B25BEB004F191B /* OtherController */,
+				650817D527B25BE1004F191B /* ViewController */,
+				650817D427B25BD0004F191B /* Model */,
+				6511DE8B27B24DE600537282 /* AppDelegate.swift */,
+				6511DE8D27B24DE600537282 /* SceneDelegate.swift */,
+				6511DE9127B24DE600537282 /* Main.storyboard */,
+				6511DE9427B24DE900537282 /* Assets.xcassets */,
+				6511DE9627B24DE900537282 /* LaunchScreen.storyboard */,
+				6511DE9927B24DE900537282 /* Info.plist */,
+				65448F6827B2B543009C2A22 /* Songti.ttc */,
+			);
+			path = DrinkOrder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6511DE8727B24DE600537282 /* DrinkOrder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6511DE9C27B24DE900537282 /* Build configuration list for PBXNativeTarget "DrinkOrder" */;
+			buildPhases = (
+				6511DE8427B24DE600537282 /* Sources */,
+				6511DE8527B24DE600537282 /* Frameworks */,
+				6511DE8627B24DE600537282 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrinkOrder;
+			productName = DrinkOrder;
+			productReference = 6511DE8827B24DE600537282 /* DrinkOrder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6511DE8027B24DE600537282 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					6511DE8727B24DE600537282 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 6511DE8327B24DE600537282 /* Build configuration list for PBXProject "DrinkOrder" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6511DE7F27B24DE600537282;
+			productRefGroup = 6511DE8927B24DE600537282 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6511DE8727B24DE600537282 /* DrinkOrder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6511DE8627B24DE600537282 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6511DE9827B24DE900537282 /* LaunchScreen.storyboard in Resources */,
+				6511DE9527B24DE900537282 /* Assets.xcassets in Resources */,
+				6511DE9327B24DE600537282 /* Main.storyboard in Resources */,
+				65448F6927B2B543009C2A22 /* Songti.ttc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6511DE8427B24DE600537282 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650817D327B25BBF004F191B /* DrinkType.swift in Sources */,
+				652849DB27B3BE930093420F /* ItemTableViewController.swift in Sources */,
+				6527447A27C4CCF30007ED04 /* OrderItem.swift in Sources */,
+				6511DE9027B24DE600537282 /* UserViewController.swift in Sources */,
+				6511DE8C27B24DE600537282 /* AppDelegate.swift in Sources */,
+				6520ECCE27B4B70400DBA54D /* Menu.swift in Sources */,
+				65D924C527BA4D27009065C7 /* ChooseViewController.swift in Sources */,
+				65BDCD7127D09FCE00D3374A /* LoadingViewController.swift in Sources */,
+				6587DFE427BE83BC0049917A /* HeaderInfo.swift in Sources */,
+				65317DA427BF92970041A95C /* CartTableViewCell.swift in Sources */,
+				650817DC27B26D2C004F191B /* MenuViewController.swift in Sources */,
+				6587DFE227BE82210049917A /* GlobalData.swift in Sources */,
+				6587DFDE27BE7BB60049917A /* CartViewController.swift in Sources */,
+				650817DA27B262C6004F191B /* NetWorkError.swift in Sources */,
+				6511DE8E27B24DE600537282 /* SceneDelegate.swift in Sources */,
+				652849D927B3B97D0093420F /* UserTableViewController.swift in Sources */,
+				65FB330C27B4E7D40057CD86 /* ItemTableViewCell.swift in Sources */,
+				6548A3DB27CDF09500C39C40 /* OrderTableViewController.swift in Sources */,
+				65317DA227BF8F630041A95C /* CartTableViewController.swift in Sources */,
+				6527447C27C4D3F30007ED04 /* OrderHeader.swift in Sources */,
+				6527448027C5EBD30007ED04 /* LogInViewController.swift in Sources */,
+				65E1BA9127C8AD4B008A1846 /* OrderHeader_status.swift in Sources */,
+				655D9C8F27BCD3FC007166DA /* DrinkAttributes.swift in Sources */,
+				6548A3D727CC75ED00C39C40 /* OrderViewController.swift in Sources */,
+				65D924C727BA4D4E009065C7 /* ChooseTableViewController.swift in Sources */,
+				6548A3DD27CDF0EA00C39C40 /* OrderTableViewCell.swift in Sources */,
+				650817D827B25C5A004F191B /* NetWorkController.swift in Sources */,
+				6587DFE027BE81390049917A /* Cart.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6511DE9127B24DE600537282 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6511DE9227B24DE600537282 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6511DE9627B24DE900537282 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6511DE9727B24DE900537282 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6511DE9A27B24DE900537282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6511DE9B27B24DE900537282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6511DE9D27B24DE900537282 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7VYBSBW34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DrinkOrder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tommy.DrinkOrder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6511DE9E27B24DE900537282 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M7VYBSBW34;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DrinkOrder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tommy.DrinkOrder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6511DE8327B24DE600537282 /* Build configuration list for PBXProject "DrinkOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6511DE9A27B24DE900537282 /* Debug */,
+				6511DE9B27B24DE900537282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6511DE9C27B24DE900537282 /* Build configuration list for PBXNativeTarget "DrinkOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6511DE9D27B24DE900537282 /* Debug */,
+				6511DE9E27B24DE900537282 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6511DE8027B24DE600537282 /* Project object */;
+}
