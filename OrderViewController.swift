@@ -46,8 +46,6 @@ class OrderViewController: UIViewController {
                         
                         OrderTVC.tableView.reloadData()
                         
-//                        self.loadingVC.finfish = true
-//                        print("self.loadingVC.finfish:\(self.loadingVC.finfish)")
                         self.navigationController?.popViewController(animated: false)
                         
                         if orderHeader.records.isEmpty {
@@ -58,7 +56,17 @@ class OrderViewController: UIViewController {
                         
                     }
                 case .failure:
-                    print("失敗")
+                    
+                    DispatchQueue.main.async {
+                        NetWorkController.shared.showAlert(title: "訊息", message: "訂單讀取失敗") { alert in
+                            self.present(alert, animated: true){
+                                DispatchQueue.main.async {
+                                    self.navigationController?.popViewController(animated: false)
+                                }
+                            }
+                            
+                        }
+                    }
                 }
             }
             

@@ -62,9 +62,15 @@ class ChooseViewController: UIViewController {
                 
                 g_cartData.append(cartData)
                 
-                setAlert(title: "已新增至購物車")
+                NetWorkController.shared.showAlert(title: "提醒", message: "已新增至購物車") { alert in
+                    present(alert, animated: true, completion: nil)
+                }
+
             }else{
-                setAlert(title: "請輸入完整資訊")
+                NetWorkController.shared.showAlert(title: "提醒", message: "請輸入完整資訊") { alert in
+                    present(alert, animated: true, completion: nil)
+                }
+
             }
             
         }
@@ -74,15 +80,18 @@ class ChooseViewController: UIViewController {
     func countPrice(){
         //計算金額
         self.children.forEach { viewController in
-            var currentPrice = 0
+            
             guard let chooseTableViewController = viewController as? ChooseTableViewController else {
                 return }
             //金額先歸零
-            chooseTableViewController.priceLabel.text = "\(currentQuantity * currentPrice)"
+            price = 0
             
             guard let currentSizeAttribute = chooseTableViewController.currentSizeAttribute else { return }
             
             guard let currentIceAttribute = chooseTableViewController.currentIceAttribute else { return }
+            
+            //單價
+            var currentPrice = 0
             
                 switch currentSizeAttribute {
                 case .M:
@@ -99,25 +108,14 @@ class ChooseViewController: UIViewController {
             
             if chooseTableViewController.currentAddBubble {
                 price = currentQuantity * currentPrice + 5 * currentQuantity
-                chooseTableViewController.priceLabel.text = "\(price)"
             }else{
                 price = currentQuantity * currentPrice
-                chooseTableViewController.priceLabel.text = "\(price)"
             }
             
+            chooseTableViewController.priceLabel.text = "\(price)"
         }
     }
     
-    //跳出alert訊息
-    func setAlert(title: String){
-        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-        
-    }
     //初始設定ChooseTableViewController
     func setChooseTableViewController(){
         self.children.forEach { viewController in

@@ -31,11 +31,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var underlineViewCenterXConstraint: NSLayoutConstraint!
     @IBOutlet weak var underlineViewTopConstraint: NSLayoutConstraint!
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//        netWorkController.task?.cancel()
-//        netWorkController.task = nil
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //標題
@@ -176,15 +171,15 @@ class MenuViewController: UIViewController {
             
             guard let itemMenu = getItemMenu(from: currentPage) else { return }
             
-            //換頁要滑到最上面
-            itemTableViewController.tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
-            
             //給item值
             itemTableViewController.currentMenu = itemMenu
             //更新tableview
             itemTableViewController.tableView.reloadData()
             //向右滑入cell動畫
             itemTableViewController.tableView.reloadSections(IndexSet(integer: 0), with: .right)
+            
+            //換頁要滑到最上面
+            itemTableViewController.tableView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         }
     }
     

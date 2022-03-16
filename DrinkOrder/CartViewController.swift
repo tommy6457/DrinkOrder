@@ -63,12 +63,11 @@ class CartViewController: UIViewController {
         let datePicker = UIDatePicker()
         
         datePicker.preferredDatePickerStyle = .wheels
-        datePicker.addTarget(self, action: #selector(datePickerEditingChanged), for: .valueChanged)
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
         
         //alertController加TextField
         alertController.addTextField { textField in
             textField.inputView = datePicker
-            textField.text = NetWorkController.shared.getOrderHeaderDateTime(date: datePicker.date)
             textField.addTarget(self, action: #selector(self.textfieldEditingChanged), for: .editingChanged)
         }
         
@@ -80,8 +79,6 @@ class CartViewController: UIViewController {
         }
         
         let action_Cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        action_Ok.isEnabled = false
         
         alertController.addAction(action_Ok)
         alertController.addAction(action_Cancel)
@@ -168,7 +165,7 @@ class CartViewController: UIViewController {
     }
     
     //datePicker值改變會觸發
-    @objc func datePickerEditingChanged(sender: UIDatePicker){
+    @objc func datePickerValueChanged(sender: UIDatePicker){
         
         if let textField = alertController.textFields?[0] ,
            let action = alertController.actions.first{
@@ -192,12 +189,35 @@ class CartViewController: UIViewController {
         
         var orderNumber = NetWorkController.shared.getOrderHeaderDate(date: Date())
         
+        //取號
         NetWorkController.shared.fetchOrderHeader(urlString: NetWorkController.getOrderHeaderURL, where: (field: "orderNumber", value: orderNumber)) { result in
             
             switch result{
                 
-            case.failure:
-                orderNumber += "000001"
+            case.failure(let error):
+                
+                var errorMessage = ""
+                
+                switch error{
+                case .invalidData:
+                    errorMessage = "invalidData"
+                case .invalidJsonFormat:
+                    errorMessage = "invalidJsonFormat"
+                case .invalidResponse:
+                    errorMessage = "invalidResponse"
+                case .invalidurl:
+                    errorMessage = "invalidurl"
+                case .requestFailed:
+                    errorMessage = "requestFailed"
+                }
+                
+                DispatchQueue.main.async {
+                    NetWorkController.shared.showAlert(title: "警告", message: "訂單建立失敗" + errorMessage) { alert in
+                        
+                        self.present(alert, animated: true)
+                    }
+                }
+                return
                 
             case.success(var result):
                 
@@ -217,7 +237,6 @@ class CartViewController: UIViewController {
                     number += 1
                     //轉文字合併字串
                     orderNumber += NetWorkController.shared.getFrontZero(count: 6, value: number)
-                    
                 }else{
                     
                     orderNumber += "000001"
@@ -239,7 +258,6 @@ class CartViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.navigationController?.pushViewController(self.loadingVC, animated: false)
                 }
-                
                 
                 NetWorkController.shared.postOrderHeader(urlString: NetWorkController.orderHeaderURL, orderHeader: self.orderHeader) { result in
                     
@@ -284,38 +302,50 @@ class CartViewController: UIViewController {
                             
                             switch result {
                             case .failure(let error):
-                                print("失敗")
+                                var errorMessage = ""
                                 
                                 switch error{
-                                case .requestFailed:
-                                    print("requestFailed")
-                                case .invalidurl:
-                                    print("invalidurl")
-                                case .invalidResponse:
-                                    print("invalidResponse")
-                                case .invalidJsonFormat:
-                                    print("invalidJsonFormat")
                                 case .invalidData:
-                                    print("invalidData")
+                                    errorMessage = "invalidData"
+                                case .invalidJsonFormat:
+                                    errorMessage = "invalidJsonFormat"
+                                case .invalidResponse:
+                                    errorMessage = "invalidResponse"
+                                case .invalidurl:
+                                    errorMessage = "invalidurl"
+                                case .requestFailed:
+                                    errorMessage = "requestFailed"
                                 }
                                 
-                            case .success(let orderItem):
-                                    
-                                    DispatchQueue.main.async {
-                                        //刪除購物車資料
-                                        self.removeCartTable()
+                                DispatchQueue.main.async {
+                                    NetWorkController.shared.showAlert(title: "警告", message: "訂單建立失敗" + errorMessage) { alert in
                                         
-                                        NetWorkController.shared.showAlert(title: "通知", message: "訂單建立成功") { alert in
+                                        self.present(alert, animated: true) {
                                             
-                                            self.present(alert, animated: true) {
-                                                
-                                                DispatchQueue.main.async {
-                                                    self.navigationController?.popViewController(animated: false)
-                                                }
-                                                
+                                            DispatchQueue.main.async {
+                                                self.navigationController?.popViewController(animated: false)
                                             }
                                         }
                                     }
+                                }
+                                
+                            case .success:
+                                
+                                DispatchQueue.main.async {
+                                    //刪除購物車資料
+                                    self.removeCartTable()
+                                    
+                                    NetWorkController.shared.showAlert(title: "通知", message: "訂單建立成功") { alert in
+                                        
+                                        self.present(alert, animated: true) {
+                                            
+                                            DispatchQueue.main.async {
+                                                self.navigationController?.popViewController(animated: false)
+                                            }
+                                            
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

@@ -135,7 +135,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kk4-uz-Ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3171.0144927536235" y="-228.34821428571428"/>
+            <point key="canvasLocation" x="3259" y="198"/>
         </scene>
         <!--想喝點什麼？-->
         <scene sceneID="tne-QT-ifu">
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="-228"/>
+            <point key="canvasLocation" x="2358" y="198"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="PTO-NH-5mH">
@@ -485,7 +485,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCa-at-PmK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6443.4782608695659" y="56.919642857142854"/>
+            <point key="canvasLocation" x="6759" y="94"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="2e3-oC-vuY">
@@ -1352,7 +1352,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOU-IF-x0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9252.1739130434798" y="135.9375"/>
+            <point key="canvasLocation" x="9333" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ehA-Do-0lE">
