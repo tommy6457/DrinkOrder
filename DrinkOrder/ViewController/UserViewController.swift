@@ -9,21 +9,12 @@ import UIKit
 
 class UserViewController: UIViewController {
     
-    internal init?(userName: String? = nil, coder: NSCoder) {
-        super.init(coder: coder)
-        self.userName = userName
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    var userName: String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NetWorkController.shared.showAlert(title: "提示", message: "登入成功") { alert in
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     @IBAction func clickHistoryOrder(_ sender: Any) {

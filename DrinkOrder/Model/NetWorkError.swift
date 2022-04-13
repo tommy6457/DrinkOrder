@@ -13,4 +13,6 @@ enum NetWorkError:Error {
     case invalidResponse
     case invalidData
     case invalidJsonFormat
+    case other(String)
+    
 }

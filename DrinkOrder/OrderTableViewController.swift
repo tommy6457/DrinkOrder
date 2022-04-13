@@ -290,6 +290,8 @@ class OrderTableViewController: UITableViewController {
                                 print("invalidResponse")
                             case .requestFailed:
                                 print("requestFailed")
+                            case .other:
+                                print("other")
                             }
                         case .success:
                             
@@ -346,6 +348,8 @@ class OrderTableViewController: UITableViewController {
                     print("invalidResponse")
                 case .requestFailed:
                     print("requestFailed")
+                case .other:
+                    print("other")
                 }
             case .success(let orderItem):
                 print("orderItem\(orderItem)")

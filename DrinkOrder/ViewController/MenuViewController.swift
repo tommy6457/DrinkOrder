@@ -62,33 +62,43 @@ class MenuViewController: UIViewController {
                         //根據結果判斷
                         switch result {
                         case .success(let menu):
-            
+                            
                             self.menu = menu
-            
+                            
                             DispatchQueue.main.async {
                                 self.setItemTableViewController(currentpage: self.currentPage)
                                 self.navigationController?.popViewController(animated: false)
                                 
                             }
-            
+                            
                         case.failure(let error):
-            
+                            var errorMessage = ""
                             switch error {
                             case .invalidurl:
-                                print("invalidurl")
-            
+                                errorMessage = "invalidurl"
+                                
                             case .invalidJsonFormat:
-                                print("invalidJsonFormat")
-            
+                                errorMessage = "invalidJsonFormat"
                             case .invalidData:
-                                print("invalidData")
-            
+                                errorMessage = "invalidData"
                             case .requestFailed:
-                                print("requestFailed")
-            
+                                errorMessage = "requestFailed"
                             case .invalidResponse:
-                                print("invalidResponse")
-            
+                                errorMessage = "invalidResponse"
+                            case .other:
+                                errorMessage = "other"
+                            }
+                            
+                            
+                            NetWorkController.shared.showAlert(title: "警告", message: "資料抓取錯誤：\(errorMessage)") { alert in
+                                DispatchQueue.main.async {
+                                    self.present(alert, animated: true){
+                                        DispatchQueue.main.async {
+                                            self.navigationController?.popViewController(animated: false)
+                                            self.navigationController?.popViewController(animated: false)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -97,22 +107,33 @@ class MenuViewController: UIViewController {
                 
             case.failure(let error):
                 
+                var errorMessage = ""
+                
                 switch error {
                 case .invalidurl:
-                    print("invalidurl")
+                    errorMessage = "invalidurl"
                     
                 case .invalidJsonFormat:
-                    print("invalidJsonFormat")
-                    
+                    errorMessage = "invalidJsonFormat"
                 case .invalidData:
-                    print("invalidData")
-                    
+                    errorMessage = "invalidData"
                 case .requestFailed:
-                    print("requestFailed")
-                    
+                    errorMessage = "requestFailed"
                 case .invalidResponse:
-                    print("invalidResponse")
-                    
+                    errorMessage = "invalidResponse"
+                case .other:
+                    errorMessage = "other"
+                }
+                DispatchQueue.main.async {
+                    NetWorkController.shared.showAlert(title: "警告", message: "資料抓取錯誤：\(errorMessage)") { alert in
+                        
+                        self.present(alert, animated: true){
+                            DispatchQueue.main.async {
+                                self.navigationController?.popViewController(animated: false)
+                                self.navigationController?.popViewController(animated: false)
+                            }
+                        }
+                    }
                 }
                 
             }
@@ -129,7 +150,7 @@ class MenuViewController: UIViewController {
     func setMenuButton(index: Int, records: DrinkType.Records){
         
         let button = UIButton()
-        button.setAttributedTitle(NSAttributedString(string: records.fields.typeName, attributes: [.foregroundColor: UIColor(named: "AccentColor")!, .font: UIFont(name: "Songti TC Bold", size: 15)!]), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: records.fields.typeName, attributes: [.foregroundColor: UIColor(named: "AccentColor")!, .font: UIFont(name: "Songti TC", size: 15)!]), for: .normal)
         button.tag = index
         button.addTarget(self, action: #selector(self.clickMenu), for: .touchUpInside)
         //stackView要使用addArrangedSubview

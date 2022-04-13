@@ -62,6 +62,7 @@ class OrderViewController: UIViewController {
                             self.present(alert, animated: true){
                                 DispatchQueue.main.async {
                                     self.navigationController?.popViewController(animated: false)
+                                    self.navigationController?.popViewController(animated: false)
                                 }
                             }
                             

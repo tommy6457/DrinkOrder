@@ -209,6 +209,8 @@ class CartViewController: UIViewController {
                     errorMessage = "invalidurl"
                 case .requestFailed:
                     errorMessage = "requestFailed"
+                case .other:
+                    errorMessage = "other"
                 }
                 
                 DispatchQueue.main.async {
@@ -278,6 +280,8 @@ class CartViewController: UIViewController {
                             errorMessage = "invalidurl"
                         case .requestFailed:
                             errorMessage = "requestFailed"
+                        case .other:
+                            errorMessage = "other"
                         }
                         
                         DispatchQueue.main.async {
@@ -315,6 +319,8 @@ class CartViewController: UIViewController {
                                     errorMessage = "invalidurl"
                                 case .requestFailed:
                                     errorMessage = "requestFailed"
+                                case .other:
+                                    errorMessage = "other"
                                 }
                                 
                                 DispatchQueue.main.async {

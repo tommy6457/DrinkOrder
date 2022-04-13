@@ -11,7 +11,7 @@ import UIKit
 struct NetWorkController {
     
     static let shared = NetWorkController()
-    static let apikey = "Your KEY"
+    static let apikey = "Your KEY" 
     //URL
     static let getDrinkTypeURL = "https://api.airtable.com/v0/appF1OKCnZdGbqDDt/DrinkType?sort%5B0%5D%5Bfield%5D=createdTime&sort%5B0%5D%5Bdirection%5D=asc&api_key=\(NetWorkController.apikey)"
     static let getMenuURL = "https://api.airtable.com/v0/appF1OKCnZdGbqDDt/Menu?sort%5B0%5D%5Bfield%5D=createdTime&sort%5B0%5D%5Bdirection%5D=asc&api_key=\(NetWorkController.apikey)"
